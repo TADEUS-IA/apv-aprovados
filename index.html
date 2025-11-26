@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de Automação - Transforme Curiosos em Clientes</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: { 400: '#34d399', 500: '#10b981', 900: '#064e3b' },
+                        zinc: { 800: '#27272a', 900: '#18181b', 950: '#09090b' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            background-color: #09090b;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-card {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            border-color: rgba(52, 211, 153, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.1);
+        }
+
+        .timeline-line {
+            background: linear-gradient(to bottom, rgba(16, 185, 129, 0.5), rgba(16, 185, 129, 0.1), transparent);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20 pb-32 overflow-hidden">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-emerald-500/20 rounded-full blur-[100px]"></div>
+        <div class="absolute top-40 right-20 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]"></div>
+
+        <div class="relative max-w-6xl mx-auto px-6 text-center z-10">
+            <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-medium mb-8">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+                Valeu por acompanhar! 👊
+            </div>
+
+            <h1 class="reveal delay-100 text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                Transformar Curiosos em
+                <span class="block mt-2 bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent">
+                    Clientes no Automático
+                </span>
+            </h1>
+
+            <p class="reveal delay-200 text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Vi que você comentou <strong class="text-white">"AUTOMAÇÃO"</strong>. Como prometi, aqui está o fluxo exato que uso para vender sem depender de sorte.
+            </p>
+
+            <div class="reveal delay-300 flex flex-wrap justify-center gap-4">
+                <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800/50 text-zinc-300 border border-zinc-700/50">
+                    <i data-lucide="instagram" class="w-5 h-5 text-pink-400"></i>
+                    <span>Instagram</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800/50 text-zinc-300 border border-zinc-700/50">
+                    <i data-lucide="message-circle" class="w-5 h-5 text-green-400"></i>
+                    <span>WhatsApp</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-800/50 text-zinc-300 border border-zinc-700/50">
+                    <i data-lucide="zap" class="w-5 h-5 text-orange-400"></i>
+                    <span>n8n</span>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+                <i data-lucide="chevron-down" class="w-8 h-8 text-white"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Os 5 Passos do Funil</h2>
+                <p class="text-zinc-400 text-lg">Do comentário no post até o dinheiro no bolso.</p>
+            </div>
+
+            <div class="relative">
+                <div class="timeline-line absolute left-1/2 top-0 bottom-0 w-px hidden lg:block"></div>
+                <div class="space-y-12 lg:space-y-24">
+                    
+                    <div class="reveal flex flex-col lg:flex-row items-center gap-8">
+                        <div class="flex-1 w-full">
+                            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 to-rose-500"></div>
+                                <div class="flex items-start gap-6">
+                                    <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center shadow-lg">
+                                        <i data-lucide="instagram" class="w-7 h-7 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="text-4xl font-bold text-zinc-700">01</span>
+                                            <h3 class="text-2xl font-semibold">Atração</h3>
+                                        </div>
+                                        <p class="text-zinc-400">A pessoa me encontra no Instagram, se interessa pelo tema e comenta ou manda mensagem.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex w-16 justify-center">
+                            <div class="w-4 h-4 rounded-full bg-pink-500 shadow-[0_0_15px_rgba(236,72,153,0.5)]"></div>
+                        </div>
+                        <div class="flex-1 hidden lg:block"></div>
+                    </div>
+
+                    <div class="reveal flex flex-col lg:flex-row-reverse items-center gap-8">
+                        <div class="flex-1 w-full">
+                            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-green-500"></div>
+                                <div class="flex items-start gap-6">
+                                    <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center shadow-lg">
+                                        <i data-lucide="bot" class="w-7 h-7 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="text-4xl font-bold text-zinc-700">02</span>
+                                            <h3 class="text-2xl font-semibold">Primeiro Contato</h3>
+                                        </div>
+                                        <p class="text-zinc-400">O sistema manda mensagem automática perguntando sobre o negócio e a dor principal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex w-16 justify-center">
+                            <div class="w-4 h-4 rounded-full bg-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.5)]"></div>
+                        </div>
+                        <div class="flex-1 hidden lg:block"></div>
+                    </div>
+
+                    <div class="reveal flex flex-col lg:flex-row items-center gap-8">
+                        <div class="flex-1 w-full">
+                            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                                <div class="flex items-start gap-6">
+                                    <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
+                                        <i data-lucide="database" class="w-7 h-7 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="text-4xl font-bold text-zinc-700">03</span>
+                                            <h3 class="text-2xl font-semibold">Organização</h3>
+                                        </div>
+                                        <p class="text-zinc-400">Respostas vão pra planilha/CRM. Nome, Whats, negócio e nível de interesse.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex w-16 justify-center">
+                            <div class="w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.5)]"></div>
+                        </div>
+                        <div class="flex-1 hidden lg:block"></div>
+                    </div>
+
+                    <div class="reveal flex flex-col lg:flex-row-reverse items-center gap-8">
+                        <div class="flex-1 w-full">
+                            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-500 to-purple-500"></div>
+                                <div class="flex items-start gap-6">
+                                    <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center shadow-lg">
+                                        <i data-lucide="filter" class="w-7 h-7 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="text-4xl font-bold text-zinc-700">04</span>
+                                            <h3 class="text-2xl font-semibold">Filtragem</h3>
+                                        </div>
+                                        <p class="text-zinc-400">O sistema avisa os leads quentes (dona de negócio, dor real) e eu entro manualmente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex w-16 justify-center">
+                            <div class="w-4 h-4 rounded-full bg-violet-500 shadow-[0_0_15px_rgba(139,92,246,0.5)]"></div>
+                        </div>
+                        <div class="flex-1 hidden lg:block"></div>
+                    </div>
+
+                    <div class="reveal flex flex-col lg:flex-row items-center gap-8">
+                        <div class="flex-1 w-full">
+                            <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+                                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 to-orange-500"></div>
+                                <div class="flex items-start gap-6">
+                                    <div class="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg">
+                                        <i data-lucide="calendar-check" class="w-7 h-7 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <div class="flex items-center gap-3 mb-2">
+                                            <span class="text-4xl font-bold text-zinc-700">05</span>
+                                            <h3 class="text-2xl font-semibold">Diagnóstico</h3>
+                                        </div>
+                                        <p class="text-zinc-400">Chamo para diagnóstico, mostro o erro e ofereço a implementação do fluxo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden lg:flex w-16 justify-center">
+                            <div class="w-4 h-4 rounded-full bg-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.5)]"></div>
+                        </div>
+                        <div class="flex-1 hidden lg:block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-emerald-500/10 to-transparent pointer-events-none"></div>
+        
+        <div class="relative max-w-3xl mx-auto px-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    Quer ver como isso ficaria
+                    <span class="block text-emerald-400 mt-2">no seu negócio?</span>
+                </h2>
+                <p class="text-zinc-400 text-lg">
+                    Não vou te empurrar nada. A ideia é te mostrar o que é possível e você decide.
+                </p>
+            </div>
+
+            <div class="reveal delay-200">
+                <div class="glass-card p-8 md:p-10 rounded-3xl border border-zinc-800 bg-zinc-900/90">
+                    <form id="leadForm" class="space-y-8" onsubmit="handleSubmit(event)">
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-300 mb-3">
+                                👉 Qual é o tipo do seu negócio hoje?
+                            </label>
+                            <input 
+                                id="inputNegocio"
+                                type="text" 
+                                required
+                                placeholder="Ex: Loja de roupas, consultoria, restaurante..."
+                                class="w-full bg-zinc-800/50 border border-zinc-700 rounded-xl px-4 py-4 text-white placeholder-zinc-500 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all"
+                            >
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-zinc-300 mb-3">
+                                👉 Onde você vende mais hoje?
+                            </label>
+                            <input type="hidden" id="inputCanal" value="">
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                <button type="button" onclick="selectChannel(this, 'WhatsApp')" class="channel-btn p-4 rounded-xl border border-zinc-700 bg-zinc-800/50 text-zinc-400 hover:border-zinc-500 transition-all text-center">
+                                    WhatsApp
+                                </button>
+                                <button type="button" onclick="selectChannel(this, 'Instagram')" class="channel-btn p-4 rounded-xl border border-zinc-700 bg-zinc-800/50 text-zinc-400 hover:border-zinc-500 transition-all text-center">
+                                    Instagram
+                                </button>
+                                <button type="button" onclick="selectChannel(this, 'Presencial')" class="channel-btn p-4 rounded-xl border border-zinc-700 bg-zinc-800/50 text-zinc-400 hover:border-zinc-500 transition-all text-center">
+                                    Presencial
+                                </button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="group w-full h-16 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-lg rounded-xl shadow-lg shadow-emerald-500/20 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2">
+                            Quero ver meu diagnóstico
+                            <i data-lucide="brand-whatsapp" class="w-5 h-5"></i>
+                        </button>
+
+                        <p class="text-center text-zinc-500 text-sm">
+                            Você será redirecionado para o WhatsApp 📲
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 border-t border-zinc-800 bg-zinc-950">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p class="text-zinc-500 text-sm">Feito com 💚 para quem quer vender no automático.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ==========================================
+        // CONFIGURAÇÃO: COLOQUE SEU NÚMERO AQUI
+        // ==========================================
+        const SEU_NUMERO_DO_WHATSAPP = "11916072188"; // Ex: 5511999998888 (Apenas números)
+        // ==========================================
+
+        lucide.createIcons();
+
+        // Animação de Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Lógica de Seleção de Canal
+        function selectChannel(btn, valor) {
+            document.querySelectorAll('.channel-btn').forEach(b => {
+                b.classList.remove('bg-emerald-500/20', 'border-emerald-500', 'text-emerald-400');
+                b.classList.add('bg-zinc-800/50', 'text-zinc-400');
+            });
+            btn.classList.remove('bg-zinc-800/50', 'text-zinc-400');
+            btn.classList.add('bg-emerald-500/20', 'border-emerald-500', 'text-emerald-400');
+            
+            // Salva o valor no input escondido
+            document.getElementById('inputCanal').value = valor;
+        }
+
+        // Enviar para o WhatsApp
+        function handleSubmit(e) {
+            e.preventDefault();
+            
+            const negocio = document.getElementById('inputNegocio').value;
+            const canal = document.getElementById('inputCanal').value || "Não informou";
+            const btn = e.target.querySelector('button[type="submit"]');
+
+            // Feedback visual no botão
+            btn.innerHTML = `<i data-lucide="loader" class="animate-spin w-5 h-5 mr-2"></i> Abrindo WhatsApp...`;
+            lucide.createIcons();
+
+            // Monta a mensagem
+            const mensagem = `Olá! Vi sua página sobre o Funil Automático.\n\n👉 Meu negócio: ${negocio}\n👉 Vendo mais por: ${canal}\n\nQuero saber como ficaria para mim!`;
+            
+            // Cria o link
+            const linkWhatsApp = `https://wa.me/${5511916072188}?text=${encodeURIComponent(mensagem)}`;
+
+            // Redireciona após 1 segundo (para dar tempo de ver a animação)
+            setTimeout(() => {
+                window.location.href = linkWhatsApp;
+                // Volta o botão ao normal caso a pessoa volte a página
+                setTimeout(() => {
+                    btn.innerHTML = `Quero ver meu diagnóstico <i data-lucide="brand-whatsapp" class="w-5 h-5 ml-2"></i>`;
+                    lucide.createIcons();
+                }, 1000);
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
